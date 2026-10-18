@@ -1,372 +1,826 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Robo Kids Tozeur | Club de robotique et d’Arduino pour enfants à Tozeur</title>
-  <meta name="description" content="Robo Kids Tozeur est un nouveau club de robotique à Tozeur : les enfants découvrent l’Arduino, la programmation et la création par la pratique, en partant de zéro.">
-  <meta name="theme-color" content="#0b1f3a">
-  <!-- À MODIFIER après publication : remplacez l'adresse ci-dessous par l'adresse réelle du site -->
-  <link rel="canonical" href="https://VOTRE-SITE.example/">
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Robo Kids Tozeur | Club de robotique et d’Arduino pour enfants à Tozeur
+    </title>
+    <meta
+      name="description"
+      content="Robo Kids Tozeur est un nouveau club de robotique à Tozeur : les enfants découvrent l’Arduino, la programmation et la création par la pratique, en partant de zéro."
+    />
+    <meta name="theme-color" content="#0b1f3a" />
+    <!-- À MODIFIER après publication : remplacez l'adresse ci-dessous par l'adresse réelle du site -->
+    <link rel="canonical" href="https://robo-kids.vercel.app/" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
 
-  <!-- Open Graph : l'image et l'URL doivent être absolues une fois le site publié -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Robo Kids Tozeur">
-  <meta property="og:title" content="Robo Kids Tozeur | Club de robotique pour enfants à Tozeur">
-  <meta property="og:description" content="Robotique, Arduino et programmation pour débutants, par la pratique. Un nouveau club à Tozeur, Tunisie.">
-  <meta property="og:url" content="https://VOTRE-SITE.example/">
-  <meta property="og:image" content="https://VOTRE-SITE.example/assets/images/og-cover.png">
-  <meta property="og:image:alt" content="Robo Kids Tozeur, club de robotique pour enfants">
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Open Graph : l'image et l'URL doivent être absolues une fois le site publié -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Robo Kids Tozeur" />
+    <meta
+      property="og:title"
+      content="Robo Kids Tozeur | Club de robotique pour enfants à Tozeur"
+    />
+    <meta
+      property="og:description"
+      content="Robotique, Arduino et programmation pour débutants, par la pratique. Un nouveau club à Tozeur, Tunisie."
+    />
+    <meta property="og:url" content="https://robo-kids.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://robo-kids.vercel.app/assets/images/og-cover.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Robo Kids Tozeur, club de robotique pour enfants"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Polices Google : le site reste lisible avec les polices système si elles ne se chargent pas -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <!-- Polices Google : le site reste lisible avec les polices système si elles ne se chargent pas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <header class="site-header" id="top">
-    <div class="container header-bar">
-      <a class="logo" href="#accueil" aria-label="Robo Kids Tozeur, retour à l’accueil">
-        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
-          <rect x="9" y="9" width="22" height="22" rx="4" fill="currentColor"/>
-          <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-            <path d="M4 15h5M4 20h5M4 25h5M31 15h5M31 20h5M31 25h5M15 4v5M25 4v5M15 31v5M25 31v5"/>
-          </g>
-          <circle cx="16" cy="18" r="2.6" fill="#fff"/><circle cx="24" cy="18" r="2.6" fill="#fff"/>
-          <rect x="15" y="24" width="10" height="2.4" rx="1.2" fill="#fff"/>
-        </svg>
-        <span class="logo-text">ROBO KIDS <span>TOZEUR</span></span>
-      </a>
+    <header class="site-header" id="top">
+      <div class="container header-bar">
+        <a
+          class="logo"
+          href="#accueil"
+          aria-label="Robo Kids Tozeur, retour à l’accueil"
+        >
+          <svg
+            class="logo-mark"
+            viewBox="0 0 40 40"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect
+              x="9"
+              y="9"
+              width="22"
+              height="22"
+              rx="4"
+              fill="currentColor"
+            />
+            <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+              <path
+                d="M4 15h5M4 20h5M4 25h5M31 15h5M31 20h5M31 25h5M15 4v5M25 4v5M15 31v5M25 31v5"
+              />
+            </g>
+            <circle cx="16" cy="18" r="2.6" fill="#fff" />
+            <circle cx="24" cy="18" r="2.6" fill="#fff" />
+            <rect x="15" y="24" width="10" height="2.4" rx="1.2" fill="#fff" />
+          </svg>
+          <span class="logo-text">ROBO KIDS <span>TOZEUR</span></span>
+        </a>
 
-      <nav class="main-nav" id="menu" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#club">Le Club</a></li>
-          <li><a href="#activites">Activités</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a class="btn btn-accent nav-cta" href="#inscription">Inscrire mon enfant</a>
-      </nav>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
-        <span class="menu-toggle-bars" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </div>
-  </header>
-
-  <main id="contenu">
-
-    <!-- HERO -->
-    <section class="hero" id="accueil" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title">Les jeunes esprits construisent la technologie de demain.</h1>
-          <p class="lead">Chez Robo Kids Tozeur, les enfants découvrent la robotique, l’Arduino, la programmation, la créativité et la résolution de problèmes à travers des activités pratiques, en partant de zéro.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="#club">Découvrir le club</a>
-            <a class="btn btn-outline-light" href="#contact">Nous contacter</a>
-          </div>
-          <p class="hero-note">Un club tout nouveau, à Tozeur, en Tunisie.</p>
-        </div>
-
-        <figure class="circuit-card">
-          <div class="circuit" id="circuit" data-on="false">
-            <svg viewBox="0 36 540 232" role="img" aria-labelledby="circuit-title circuit-desc">
-              <title id="circuit-title">Schéma d’un circuit simple</title>
-              <desc id="circuit-desc">Une broche de la carte Arduino est reliée à une résistance, un interrupteur et une LED, puis revient à la masse. La LED s’allume quand l’interrupteur est fermé.</desc>
-              <rect class="board" x="20" y="50" width="140" height="210" rx="10"/>
-              <text class="t-board" x="90" y="92" text-anchor="middle">Arduino</text>
-              <text class="t-small" x="148" y="124" text-anchor="end">broche 8</text>
-              <text class="t-small" x="148" y="244" text-anchor="end">GND</text>
-              <circle class="node" cx="160" cy="120" r="5"/><circle class="node" cx="160" cy="240" r="5"/>
-
-              <g class="trace">
-                <path d="M165 120H230"/>
-                <polyline points="230,120 242,120 248,106 260,134 272,106 284,134 296,106 302,120 310,120"/>
-                <path d="M310 120H360"/>
-                <path d="M420 120H470V150"/>
-                <path d="M470 182V240H165"/>
-              </g>
-              <path class="flow" d="M165 120H230M310 120H360M420 120H470V150M470 182V240H165"/>
-
-              <circle class="node" cx="360" cy="120" r="5"/><circle class="node" cx="420" cy="120" r="5"/>
-              <line class="lever" x1="360" y1="120" x2="420" y2="120"/>
-
-              <polygon class="led-body" points="454,150 486,150 470,180"/>
-              <line class="trace-solid" x1="452" y1="182" x2="488" y2="182"/>
-              <g class="led-rays"><path d="M492 142l12-10M500 154l14-3M486 134l5-14"/></g>
-
-              <text class="t-small" x="270" y="160" text-anchor="middle">résistance</text>
-              <text class="t-small" x="390" y="152" text-anchor="middle">interrupteur</text>
-              <text class="t-small" x="470" y="212" text-anchor="middle">LED</text>
-            </svg>
-          </div>
-          <figcaption>
-            <p class="circuit-status" id="circuit-status" role="status" aria-live="polite">Circuit ouvert : le courant ne passe pas, la LED est éteinte.</p>
-            <button class="btn btn-switch" type="button" id="circuit-toggle" aria-pressed="false">Fermer l’interrupteur</button>
-            <p class="caption-small">Illustration originale d’un circuit de base, le premier montage que les élèves réalisent.</p>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- LE CLUB -->
-    <section class="section" id="club" aria-labelledby="club-title">
-      <div class="container split">
-        <div class="split-lead">
-          <h2 id="club-title" class="section-title">Un club pour apprendre en fabriquant</h2>
-          <p class="big-text">Notre mission : initier les jeunes à la robotique et à la programmation par l’expérimentation, des projets guidés et le travail d’équipe.</p>
-          <p>Robo Kids Tozeur vient de démarrer. Notre premier groupe compte trois élèves débutants et un kit Arduino. Nous construisons le club pas à pas, avec le matériel dont nous disposons, et nous ajustons les séances à ce que les enfants réussissent à faire.</p>
-        </div>
-        <dl class="principles">
-          <div><dt>Partir de zéro</dt><dd>Aucune connaissance préalable n’est nécessaire. On commence par l’électricité, les circuits et un premier programme.</dd></div>
-          <div><dt>Manipuler</dt><dd>Chaque séance laisse du temps pour câbler, programmer et tester, avec ses propres mains.</dd></div>
-          <div><dt>Créer</dt><dd>Les enfants imaginent, modifient et améliorent leurs montages au lieu de recopier une notice.</dd></div>
-          <div><dt>Résoudre des problèmes</dt><dd>Une erreur est une information. On cherche ensemble d’où elle vient et comment la corriger.</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ACTIVITES -->
-    <section class="section section-tint" id="activites" aria-labelledby="activites-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="activites-title" class="section-title">Ce que les enfants font au club</h2>
-          <p>Cinq axes d’activité, abordés progressivement au fil du premier cycle de 12 semaines. Ils sont au programme et seront présentés ici en détail au fur et à mesure.</p>
-        </div>
-        <ul class="activity-grid">
-          <li class="activity">
-            <svg class="act-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="12" y="14" width="24" height="20" rx="4"/><circle cx="20" cy="24" r="2.5"/><circle cx="28" cy="24" r="2.5"/><path d="M24 14V8M24 8h0M18 34v5M30 34v5"/></svg>
-            <h3>Initiation à la robotique</h3>
-            <p>Qu’est-ce qu’un robot ? Les enfants découvrent comment une machine perçoit, décide et agit, d’abord avec des jeux sans écran, puis avec leurs premiers montages.</p>
-            <span class="status status-planned">Au programme</span>
-          </li>
-          <li class="activity">
-            <svg class="act-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="12" width="32" height="24" rx="3"/><path d="M14 12v-4M20 12v-4M26 12v-4M32 12v-4M14 36v4M20 36v4M26 36v4M32 36v4"/><rect x="18" y="19" width="12" height="10" rx="1.5"/></svg>
-            <h3>Arduino et électronique</h3>
-            <p>Brancher une carte Arduino, construire un circuit simple avec une LED sur une platine d’essai, et le faire en toute sécurité, à basse tension seulement.</p>
-            <span class="status status-planned">Au programme</span>
-          </li>
-          <li class="activity">
-            <svg class="act-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M18 14l-9 10 9 10M30 14l9 10-9 10M27 10l-6 28"/></svg>
-            <h3>Programmation pour débutants</h3>
-            <p>Écrire ses premières instructions, comprendre une boucle, une condition, une variable, et voir tout de suite le résultat sur son propre montage.</p>
-            <span class="status status-planned">Au programme</span>
-          </li>
-          <li class="activity">
-            <svg class="act-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="16" cy="24" r="5"/><path d="M26 16a12 12 0 0 1 0 16M32 11a19 19 0 0 1 0 26M40 8"/></svg>
-            <h3>Capteurs et systèmes interactifs</h3>
-            <p>Bouton, mesure de distance, lumière : les enfants font réagir un montage à ce qui se passe autour de lui.</p>
-            <span class="status status-planned">Au programme</span>
-          </li>
-          <li class="activity">
-            <svg class="act-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="14" cy="18" r="5"/><circle cx="34" cy="18" r="5"/><circle cx="24" cy="34" r="5"/><path d="M18 21l4 9M30 21l-4 9M19 18h10"/></svg>
-            <h3>Projets pratiques et travail en équipe</h3>
-            <p>Chacun son rôle : construire, programmer, tester. Ensemble, les élèves réalisent un petit projet et le présentent.</p>
-            <span class="status status-planned">Au programme</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- DEMARCHE -->
-    <section class="section" id="demarche" aria-labelledby="demarche-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="demarche-title" class="section-title">Notre démarche en quatre étapes</h2>
-          <p>Les élèves avancent progressivement. Ils apprennent surtout en essayant leurs propres expériences, pas en regardant quelqu’un d’autre les faire.</p>
-        </div>
-        <ol class="path">
-          <li><h3>Découvrir</h3><p>On observe, on pose des questions et on joue pour comprendre l’idée avant de toucher au matériel.</p></li>
-          <li><h3>Expérimenter</h3><p>On essaie, on se trompe, on corrige : chaque élève teste ses idées sur de petits montages.</p></li>
-          <li><h3>Construire</h3><p>On assemble un montage complet et on le programme, étape par étape.</p></li>
-          <li><h3>Présenter</h3><p>On explique son projet avec ses propres mots et on le montre en fonctionnement.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PROJETS -->
-    <section class="section section-tint" id="projets" aria-labelledby="projets-title">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="projets-title" class="section-title">Projets</h2>
-          <p>Nous ne publions ici que de vrais projets terminés par les élèves. En attendant, voici des exemples de projets de niveau débutant, présentés comme tels.</p>
-        </div>
-
-        <h3 class="subhead">Réalisations des élèves</h3>
-        <div id="projects-done" class="project-grid"></div>
-
-        <h3 class="subhead">Exemples et projets en préparation</h3>
-        <div id="projects-ideas" class="project-grid"></div>
-        <noscript><p class="notice">Cette section a besoin de JavaScript pour afficher les projets. Le reste du site fonctionne sans.</p></noscript>
-      </div>
-    </section>
-
-    <!-- POURQUOI -->
-    <section class="section section-dark" id="pourquoi" aria-labelledby="pourquoi-title">
-      <div class="container split">
-        <h2 id="pourquoi-title" class="section-title">Pourquoi Robo Kids Tozeur</h2>
-        <ul class="why-list">
-          <li><strong>Un apprentissage pratique.</strong> Chaque notion est vue sur un vrai montage, jamais seulement expliquée.</li>
-          <li><strong>Un accompagnement pour débutants.</strong> On avance par petites étapes, avec des explications simples et le droit de se tromper.</li>
-          <li><strong>De la créativité.</strong> Les enfants modifient les montages et inventent leurs propres variantes.</li>
-          <li><strong>Le goût du travail d’équipe.</strong> Les rôles tournent, et chacun manipule le matériel à chaque séance.</li>
-          <li><strong>Des compétences technologiques.</strong> Logique, électronique de base et programmation, utiles pour la suite.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PARENTS -->
-    <section class="section" id="parents" aria-labelledby="parents-title">
-      <div class="container split">
-        <div class="split-lead">
-          <h2 id="parents-title" class="section-title">Pour les parents</h2>
-          <p class="big-text">Votre enfant peut découvrir comment fonctionne un circuit, écrire un programme, utiliser des capteurs et réaliser un projet en équipe.</p>
-          <p>Pendant les séances, les élèves se partagent trois rôles : construire, programmer et tester. Ils changent de rôle régulièrement, pour que chacun participe vraiment.</p>
-          <p>Les séances se font avec de petits groupes et du matériel à basse tension.</p>
-        </div>
-        <div class="ask-panel">
-          <h3>Posez-nous vos questions</h3>
-          <p>Écrivez-nous pour connaître :</p>
-          <ul class="check-list">
-            <li>l’âge qui convient à votre enfant</li>
-            <li>les horaires des séances</li>
-            <li>les tarifs</li>
-            <li>les places disponibles</li>
+        <nav class="main-nav" id="menu" aria-label="Navigation principale">
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#club">Le Club</a></li>
+            <li><a href="#activites">Activités</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-          <p class="muted">Ces informations ne sont pas encore publiées sur le site : nous vous les communiquons directement.</p>
-          <a class="btn btn-primary-dark" href="#inscription">Écrire au club</a>
-        </div>
+          <a class="btn btn-accent nav-cta" href="#inscription"
+            >Inscrire mon enfant</a
+          >
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span class="menu-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <!-- INSCRIPTION -->
-    <section class="section section-tint" id="inscription" aria-labelledby="inscription-title">
-      <div class="container split split-form">
-        <div class="split-lead">
-          <h2 id="inscription-title" class="section-title">Inscrire mon enfant</h2>
-          <p class="big-text">Laissez-nous quelques informations et dites-nous ce que vous aimeriez savoir.</p>
-          <div class="demo-banner" role="note">
-            <strong>Mode démonstration.</strong> Ce formulaire vérifie vos réponses, mais il n’envoie rien et n’enregistre rien tant qu’il n’est pas relié à un vrai service. Une fois vos réponses vérifiées, vous pouvez copier le message, ou l’ouvrir dans votre messagerie quand le club aura configuré ses coordonnées.
-          </div>
-        </div>
-
-        <div class="form-panel">
-          <form id="join-form" novalidate>
-            <p class="form-error-summary" id="form-summary" role="alert" tabindex="-1" hidden></p>
-
-            <div class="field">
-              <label for="parent-name">Nom du parent ou du tuteur</label>
-              <input id="parent-name" name="parentName" type="text" autocomplete="name" required aria-describedby="parent-name-err">
-              <p class="field-error" id="parent-name-err" hidden></p>
-            </div>
-
-            <div class="field">
-              <label for="contact-field">Téléphone ou e-mail</label>
-              <input id="contact-field" name="contact" type="text" inputmode="email" autocomplete="email tel" required aria-describedby="contact-hint contact-err">
-              <p class="hint" id="contact-hint">Un numéro de téléphone ou une adresse e-mail.</p>
-              <p class="field-error" id="contact-err" hidden></p>
-            </div>
-
-            <div class="field field-narrow">
-              <label for="child-age">Âge de l’enfant</label>
-              <input id="child-age" name="childAge" type="number" inputmode="numeric" min="1" max="18" step="1" required aria-describedby="child-age-hint child-age-err">
-              <p class="hint" id="child-age-hint">En années.</p>
-              <p class="field-error" id="child-age-err" hidden></p>
-            </div>
-
-            <fieldset class="field" aria-describedby="method-err">
-              <legend>Moyen de contact préféré</legend>
-              <div class="choices">
-                <label class="choice"><input type="radio" name="method" value="Téléphone"> Téléphone</label>
-                <label class="choice"><input type="radio" name="method" value="WhatsApp"> WhatsApp</label>
-                <label class="choice"><input type="radio" name="method" value="E-mail"> E-mail</label>
-              </div>
-              <p class="field-error" id="method-err" hidden></p>
-            </fieldset>
-
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" maxlength="1000" required aria-describedby="message-err"></textarea>
-              <p class="field-error" id="message-err" hidden></p>
-            </div>
-
-            <button class="btn btn-accent btn-block" type="submit">Vérifier mon message</button>
-          </form>
-
-          <div class="result" id="form-result" hidden tabindex="-1">
-            <h3>Votre message est prêt, mais il n’a pas été envoyé</h3>
-            <p>Le formulaire est une démonstration : aucune donnée n’a quitté votre appareil. Choisissez comment contacter le club :</p>
-            <pre class="message-preview" id="message-preview" aria-label="Aperçu du message"></pre>
+    <main id="contenu">
+      <!-- HERO -->
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              Les jeunes esprits construisent la technologie de demain.
+            </h1>
+            <p class="lead">
+              Chez Robo Kids Tozeur, les enfants découvrent la robotique,
+              l’Arduino, la programmation, la créativité et la résolution de
+              problèmes à travers des activités pratiques, en partant de zéro.
+            </p>
             <div class="btn-row">
-              <button type="button" class="btn btn-primary-dark" id="copy-message">Copier le message</button>
-              <a class="btn btn-ghost" id="mail-link" href="#inscription" aria-disabled="true">Ouvrir un e-mail pré-rempli</a>
-              <a class="btn btn-ghost" id="wa-link" href="#inscription" aria-disabled="true">Ouvrir WhatsApp</a>
+              <a class="btn btn-primary" href="#club">Découvrir le club</a>
+              <a class="btn btn-outline-light" href="#contact"
+                >Nous contacter</a
+              >
             </div>
-            <p class="hint" id="alt-status" role="status" aria-live="polite"></p>
-            <button type="button" class="link-button" id="edit-message">Modifier mes réponses</button>
+            <p class="hero-note">Un club tout nouveau, à Tozeur, en Tunisie.</p>
+          </div>
+
+          <figure class="circuit-card">
+            <div class="circuit" id="circuit" data-on="false">
+              <svg
+                viewBox="0 36 540 232"
+                role="img"
+                aria-labelledby="circuit-title circuit-desc"
+              >
+                <title id="circuit-title">Schéma d’un circuit simple</title>
+                <desc id="circuit-desc">
+                  Une broche de la carte Arduino est reliée à une résistance, un
+                  interrupteur et une LED, puis revient à la masse. La LED
+                  s’allume quand l’interrupteur est fermé.
+                </desc>
+                <rect
+                  class="board"
+                  x="20"
+                  y="50"
+                  width="140"
+                  height="210"
+                  rx="10"
+                />
+                <text class="t-board" x="90" y="92" text-anchor="middle">
+                  Arduino
+                </text>
+                <text class="t-small" x="148" y="124" text-anchor="end">
+                  broche 8
+                </text>
+                <text class="t-small" x="148" y="244" text-anchor="end">
+                  GND
+                </text>
+                <circle class="node" cx="160" cy="120" r="5" />
+                <circle class="node" cx="160" cy="240" r="5" />
+
+                <g class="trace">
+                  <path d="M165 120H230" />
+                  <polyline
+                    points="230,120 242,120 248,106 260,134 272,106 284,134 296,106 302,120 310,120"
+                  />
+                  <path d="M310 120H360" />
+                  <path d="M420 120H470V150" />
+                  <path d="M470 182V240H165" />
+                </g>
+                <path
+                  class="flow"
+                  d="M165 120H230M310 120H360M420 120H470V150M470 182V240H165"
+                />
+
+                <circle class="node" cx="360" cy="120" r="5" />
+                <circle class="node" cx="420" cy="120" r="5" />
+                <line class="lever" x1="360" y1="120" x2="420" y2="120" />
+
+                <polygon class="led-body" points="454,150 486,150 470,180" />
+                <line class="trace-solid" x1="452" y1="182" x2="488" y2="182" />
+                <g class="led-rays">
+                  <path d="M492 142l12-10M500 154l14-3M486 134l5-14" />
+                </g>
+
+                <text class="t-small" x="270" y="160" text-anchor="middle">
+                  résistance
+                </text>
+                <text class="t-small" x="390" y="152" text-anchor="middle">
+                  interrupteur
+                </text>
+                <text class="t-small" x="470" y="212" text-anchor="middle">
+                  LED
+                </text>
+              </svg>
+            </div>
+            <figcaption>
+              <p
+                class="circuit-status"
+                id="circuit-status"
+                role="status"
+                aria-live="polite"
+              >
+                Circuit ouvert : le courant ne passe pas, la LED est éteinte.
+              </p>
+              <button
+                class="btn btn-switch"
+                type="button"
+                id="circuit-toggle"
+                aria-pressed="false"
+              >
+                Fermer l’interrupteur
+              </button>
+              <p class="caption-small">
+                Illustration originale d’un circuit de base, le premier montage
+                que les élèves réalisent.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- LE CLUB -->
+      <section class="section" id="club" aria-labelledby="club-title">
+        <div class="container split">
+          <div class="split-lead">
+            <h2 id="club-title" class="section-title">
+              Un club pour apprendre en fabriquant
+            </h2>
+            <p class="big-text">
+              Notre mission : initier les jeunes à la robotique et à la
+              programmation par l’expérimentation, des projets guidés et le
+              travail d’équipe.
+            </p>
+            <p>
+              Robo Kids Tozeur vient de démarrer. Notre premier groupe compte
+              trois élèves débutants et un kit Arduino. Nous construisons le
+              club pas à pas, avec le matériel dont nous disposons, et nous
+              ajustons les séances à ce que les enfants réussissent à faire.
+            </p>
+          </div>
+          <dl class="principles">
+            <div>
+              <dt>Partir de zéro</dt>
+              <dd>
+                Aucune connaissance préalable n’est nécessaire. On commence par
+                l’électricité, les circuits et un premier programme.
+              </dd>
+            </div>
+            <div>
+              <dt>Manipuler</dt>
+              <dd>
+                Chaque séance laisse du temps pour câbler, programmer et tester,
+                avec ses propres mains.
+              </dd>
+            </div>
+            <div>
+              <dt>Créer</dt>
+              <dd>
+                Les enfants imaginent, modifient et améliorent leurs montages au
+                lieu de recopier une notice.
+              </dd>
+            </div>
+            <div>
+              <dt>Résoudre des problèmes</dt>
+              <dd>
+                Une erreur est une information. On cherche ensemble d’où elle
+                vient et comment la corriger.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ACTIVITES -->
+      <section
+        class="section section-tint"
+        id="activites"
+        aria-labelledby="activites-title"
+      >
+        <div class="container">
+          <div class="section-head">
+            <h2 id="activites-title" class="section-title">
+              Ce que les enfants font au club
+            </h2>
+            <p>
+              Cinq axes d’activité, abordés progressivement au fil du premier
+              cycle de 12 semaines. Ils sont au programme et seront présentés
+              ici en détail au fur et à mesure.
+            </p>
+          </div>
+          <ul class="activity-grid">
+            <li class="activity">
+              <svg
+                class="act-icon"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="12" y="14" width="24" height="20" rx="4" />
+                <circle cx="20" cy="24" r="2.5" />
+                <circle cx="28" cy="24" r="2.5" />
+                <path d="M24 14V8M24 8h0M18 34v5M30 34v5" />
+              </svg>
+              <h3>Initiation à la robotique</h3>
+              <p>
+                Qu’est-ce qu’un robot ? Les enfants découvrent comment une
+                machine perçoit, décide et agit, d’abord avec des jeux sans
+                écran, puis avec leurs premiers montages.
+              </p>
+              <span class="status status-planned">Au programme</span>
+            </li>
+            <li class="activity">
+              <svg
+                class="act-icon"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="8" y="12" width="32" height="24" rx="3" />
+                <path
+                  d="M14 12v-4M20 12v-4M26 12v-4M32 12v-4M14 36v4M20 36v4M26 36v4M32 36v4"
+                />
+                <rect x="18" y="19" width="12" height="10" rx="1.5" />
+              </svg>
+              <h3>Arduino et électronique</h3>
+              <p>
+                Brancher une carte Arduino, construire un circuit simple avec
+                une LED sur une platine d’essai, et le faire en toute sécurité,
+                à basse tension seulement.
+              </p>
+              <span class="status status-planned">Au programme</span>
+            </li>
+            <li class="activity">
+              <svg
+                class="act-icon"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M18 14l-9 10 9 10M30 14l9 10-9 10M27 10l-6 28" />
+              </svg>
+              <h3>Programmation pour débutants</h3>
+              <p>
+                Écrire ses premières instructions, comprendre une boucle, une
+                condition, une variable, et voir tout de suite le résultat sur
+                son propre montage.
+              </p>
+              <span class="status status-planned">Au programme</span>
+            </li>
+            <li class="activity">
+              <svg
+                class="act-icon"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="16" cy="24" r="5" />
+                <path d="M26 16a12 12 0 0 1 0 16M32 11a19 19 0 0 1 0 26M40 8" />
+              </svg>
+              <h3>Capteurs et systèmes interactifs</h3>
+              <p>
+                Bouton, mesure de distance, lumière : les enfants font réagir un
+                montage à ce qui se passe autour de lui.
+              </p>
+              <span class="status status-planned">Au programme</span>
+            </li>
+            <li class="activity">
+              <svg
+                class="act-icon"
+                viewBox="0 0 48 48"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="14" cy="18" r="5" />
+                <circle cx="34" cy="18" r="5" />
+                <circle cx="24" cy="34" r="5" />
+                <path d="M18 21l4 9M30 21l-4 9M19 18h10" />
+              </svg>
+              <h3>Projets pratiques et travail en équipe</h3>
+              <p>
+                Chacun son rôle : construire, programmer, tester. Ensemble, les
+                élèves réalisent un petit projet et le présentent.
+              </p>
+              <span class="status status-planned">Au programme</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DEMARCHE -->
+      <section class="section" id="demarche" aria-labelledby="demarche-title">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="demarche-title" class="section-title">
+              Notre démarche en quatre étapes
+            </h2>
+            <p>
+              Les élèves avancent progressivement. Ils apprennent surtout en
+              essayant leurs propres expériences, pas en regardant quelqu’un
+              d’autre les faire.
+            </p>
+          </div>
+          <ol class="path">
+            <li>
+              <h3>Découvrir</h3>
+              <p>
+                On observe, on pose des questions et on joue pour comprendre
+                l’idée avant de toucher au matériel.
+              </p>
+            </li>
+            <li>
+              <h3>Expérimenter</h3>
+              <p>
+                On essaie, on se trompe, on corrige : chaque élève teste ses
+                idées sur de petits montages.
+              </p>
+            </li>
+            <li>
+              <h3>Construire</h3>
+              <p>
+                On assemble un montage complet et on le programme, étape par
+                étape.
+              </p>
+            </li>
+            <li>
+              <h3>Présenter</h3>
+              <p>
+                On explique son projet avec ses propres mots et on le montre en
+                fonctionnement.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PROJETS -->
+      <section
+        class="section section-tint"
+        id="projets"
+        aria-labelledby="projets-title"
+      >
+        <div class="container">
+          <div class="section-head">
+            <h2 id="projets-title" class="section-title">Projets</h2>
+            <p>
+              Nous ne publions ici que de vrais projets terminés par les élèves.
+              En attendant, voici des exemples de projets de niveau débutant,
+              présentés comme tels.
+            </p>
+          </div>
+
+          <h3 class="subhead">Réalisations des élèves</h3>
+          <div id="projects-done" class="project-grid"></div>
+
+          <h3 class="subhead">Exemples et projets en préparation</h3>
+          <div id="projects-ideas" class="project-grid"></div>
+          <noscript
+            ><p class="notice">
+              Cette section a besoin de JavaScript pour afficher les projets. Le
+              reste du site fonctionne sans.
+            </p></noscript
+          >
+        </div>
+      </section>
+
+      <!-- POURQUOI -->
+      <section
+        class="section section-dark"
+        id="pourquoi"
+        aria-labelledby="pourquoi-title"
+      >
+        <div class="container split">
+          <h2 id="pourquoi-title" class="section-title">
+            Pourquoi Robo Kids Tozeur
+          </h2>
+          <ul class="why-list">
+            <li>
+              <strong>Un apprentissage pratique.</strong> Chaque notion est vue
+              sur un vrai montage, jamais seulement expliquée.
+            </li>
+            <li>
+              <strong>Un accompagnement pour débutants.</strong> On avance par
+              petites étapes, avec des explications simples et le droit de se
+              tromper.
+            </li>
+            <li>
+              <strong>De la créativité.</strong> Les enfants modifient les
+              montages et inventent leurs propres variantes.
+            </li>
+            <li>
+              <strong>Le goût du travail d’équipe.</strong> Les rôles tournent,
+              et chacun manipule le matériel à chaque séance.
+            </li>
+            <li>
+              <strong>Des compétences technologiques.</strong> Logique,
+              électronique de base et programmation, utiles pour la suite.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PARENTS -->
+      <section class="section" id="parents" aria-labelledby="parents-title">
+        <div class="container split">
+          <div class="split-lead">
+            <h2 id="parents-title" class="section-title">Pour les parents</h2>
+            <p class="big-text">
+              Votre enfant peut découvrir comment fonctionne un circuit, écrire
+              un programme, utiliser des capteurs et réaliser un projet en
+              équipe.
+            </p>
+            <p>
+              Pendant les séances, les élèves se partagent trois rôles :
+              construire, programmer et tester. Ils changent de rôle
+              régulièrement, pour que chacun participe vraiment.
+            </p>
+            <p>
+              Les séances se font avec de petits groupes et du matériel à basse
+              tension.
+            </p>
+          </div>
+          <div class="ask-panel">
+            <h3>Posez-nous vos questions</h3>
+            <p>Écrivez-nous pour connaître :</p>
+            <ul class="check-list">
+              <li>l’âge qui convient à votre enfant</li>
+              <li>les horaires des séances</li>
+              <li>les tarifs</li>
+              <li>les places disponibles</li>
+            </ul>
+            <p class="muted">
+              Ces informations ne sont pas encore publiées sur le site : nous
+              vous les communiquons directement.
+            </p>
+            <a class="btn btn-primary-dark" href="#inscription"
+              >Écrire au club</a
+            >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container split">
-        <div class="split-lead">
-          <h2 id="contact-title" class="section-title">Contact</h2>
-          <p class="big-text">Robo Kids Tozeur<br>Tozeur, Tunisie</p>
-          <p>Le moyen de contact le plus fiable aujourd’hui est notre page LinkedIn officielle. Les autres coordonnées seront ajoutées dès qu’elles seront confirmées.</p>
+      <!-- INSCRIPTION -->
+      <section
+        class="section section-tint"
+        id="inscription"
+        aria-labelledby="inscription-title"
+      >
+        <div class="container split split-form">
+          <div class="split-lead">
+            <h2 id="inscription-title" class="section-title">
+              Inscrire mon enfant
+            </h2>
+            <p class="big-text">
+              Laissez-nous quelques informations et dites-nous ce que vous
+              aimeriez savoir.
+            </p>
+            <div class="demo-banner" role="note">
+              <strong>Mode démonstration.</strong> Ce formulaire vérifie vos
+              réponses, mais il n’envoie rien et n’enregistre rien tant qu’il
+              n’est pas relié à un vrai service. Une fois vos réponses
+              vérifiées, vous pouvez copier le message, ou l’ouvrir dans votre
+              messagerie quand le club aura configuré ses coordonnées.
+            </div>
+          </div>
+
+          <div class="form-panel">
+            <form id="join-form" novalidate>
+              <p
+                class="form-error-summary"
+                id="form-summary"
+                role="alert"
+                tabindex="-1"
+                hidden
+              ></p>
+
+              <div class="field">
+                <label for="parent-name">Nom du parent ou du tuteur</label>
+                <input
+                  id="parent-name"
+                  name="parentName"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  aria-describedby="parent-name-err"
+                />
+                <p class="field-error" id="parent-name-err" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="contact-field">Téléphone ou e-mail</label>
+                <input
+                  id="contact-field"
+                  name="contact"
+                  type="text"
+                  inputmode="email"
+                  autocomplete="email tel"
+                  required
+                  aria-describedby="contact-hint contact-err"
+                />
+                <p class="hint" id="contact-hint">
+                  Un numéro de téléphone ou une adresse e-mail.
+                </p>
+                <p class="field-error" id="contact-err" hidden></p>
+              </div>
+
+              <div class="field field-narrow">
+                <label for="child-age">Âge de l’enfant</label>
+                <input
+                  id="child-age"
+                  name="childAge"
+                  type="number"
+                  inputmode="numeric"
+                  min="1"
+                  max="18"
+                  step="1"
+                  required
+                  aria-describedby="child-age-hint child-age-err"
+                />
+                <p class="hint" id="child-age-hint">En années.</p>
+                <p class="field-error" id="child-age-err" hidden></p>
+              </div>
+
+              <fieldset class="field" aria-describedby="method-err">
+                <legend>Moyen de contact préféré</legend>
+                <div class="choices">
+                  <label class="choice"
+                    ><input type="radio" name="method" value="Téléphone" />
+                    Téléphone</label
+                  >
+                  <label class="choice"
+                    ><input type="radio" name="method" value="WhatsApp" />
+                    WhatsApp</label
+                  >
+                  <label class="choice"
+                    ><input type="radio" name="method" value="E-mail" />
+                    E-mail</label
+                  >
+                </div>
+                <p class="field-error" id="method-err" hidden></p>
+              </fieldset>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  maxlength="1000"
+                  required
+                  aria-describedby="message-err"
+                ></textarea>
+                <p class="field-error" id="message-err" hidden></p>
+              </div>
+
+              <button class="btn btn-accent btn-block" type="submit">
+                Vérifier mon message
+              </button>
+            </form>
+
+            <div class="result" id="form-result" hidden tabindex="-1">
+              <h3>Votre message est prêt, mais il n’a pas été envoyé</h3>
+              <p>
+                Le formulaire est une démonstration : aucune donnée n’a quitté
+                votre appareil. Choisissez comment contacter le club :
+              </p>
+              <pre
+                class="message-preview"
+                id="message-preview"
+                aria-label="Aperçu du message"
+              ></pre>
+              <div class="btn-row">
+                <button
+                  type="button"
+                  class="btn btn-primary-dark"
+                  id="copy-message"
+                >
+                  Copier le message
+                </button>
+                <a
+                  class="btn btn-ghost"
+                  id="mail-link"
+                  href="#inscription"
+                  aria-disabled="true"
+                  >Ouvrir un e-mail pré-rempli</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  id="wa-link"
+                  href="#inscription"
+                  aria-disabled="true"
+                  >Ouvrir WhatsApp</a
+                >
+              </div>
+              <p
+                class="hint"
+                id="alt-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+              <button type="button" class="link-button" id="edit-message">
+                Modifier mes réponses
+              </button>
+            </div>
+          </div>
         </div>
-        <ul class="contact-list">
-          <li>
-            <span class="contact-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/company/robo-kids-tozeur/" target="_blank" rel="noopener noreferrer">Page officielle Robo Kids Tozeur<span class="visually-hidden"> (s’ouvre dans un nouvel onglet)</span><svg class="ext-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M9 2h5v5M14 2L7 9M12 10v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3"/></svg></a>
-          </li>
-          <li><span class="contact-label">E-mail</span><span data-contact="email" class="pending">Bientôt disponible</span></li>
-          <li><span class="contact-label">WhatsApp</span><span data-contact="whatsapp" class="pending">Bientôt disponible</span></li>
-          <li><span class="contact-label">Facebook</span><span data-contact="facebook" class="pending">Bientôt disponible</span></li>
-          <li><span class="contact-label">Instagram</span><span data-contact="instagram" class="pending">Bientôt disponible</span></li>
-        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container split">
+          <div class="split-lead">
+            <h2 id="contact-title" class="section-title">Contact</h2>
+            <p class="big-text">Robo Kids Tozeur<br />Tozeur, Tunisie</p>
+            <p>
+              Le moyen de contact le plus fiable aujourd’hui est notre page
+              LinkedIn officielle. Les autres coordonnées seront ajoutées dès
+              qu’elles seront confirmées.
+            </p>
+          </div>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/company/robo-kids-tozeur/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Page officielle Robo Kids Tozeur<span class="visually-hidden">
+                  (s’ouvre dans un nouvel onglet)</span
+                ><svg
+                  class="ext-icon"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M9 2h5v5M14 2L7 9M12 10v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <span class="contact-label">E-mail</span
+              ><span data-contact="email" class="pending"
+                >Bientôt disponible</span
+              >
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp</span
+              ><span data-contact="whatsapp" class="pending"
+                >Bientôt disponible</span
+              >
+            </li>
+            <li>
+              <span class="contact-label">Facebook</span
+              ><span data-contact="facebook" class="pending"
+                >Bientôt disponible</span
+              >
+            </li>
+            <li>
+              <span class="contact-label">Instagram</span
+              ><span data-contact="instagram" class="pending"
+                >Bientôt disponible</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-logo">ROBO KIDS TOZEUR</p>
+          <p class="footer-text">
+            Club de robotique et d’Arduino pour enfants, à Tozeur, en Tunisie.
+          </p>
+        </div>
+        <nav aria-label="Navigation du pied de page">
+          <ul class="footer-nav">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#club">Le Club</a></li>
+            <li><a href="#activites">Activités</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/robo-kids-tozeur/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn<span class="visually-hidden">
+                  (s’ouvre dans un nouvel onglet)</span
+                ></a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-logo">ROBO KIDS TOZEUR</p>
-        <p class="footer-text">Club de robotique et d’Arduino pour enfants, à Tozeur, en Tunisie.</p>
+      <div class="container footer-base">
+        <p>
+          © <span id="year">2026</span> Robo Kids Tozeur. Tous droits réservés.
+        </p>
       </div>
-      <nav aria-label="Navigation du pied de page">
-        <ul class="footer-nav">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#club">Le Club</a></li>
-          <li><a href="#activites">Activités</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.linkedin.com/company/robo-kids-tozeur/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (s’ouvre dans un nouvel onglet)</span></a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container footer-base">
-      <p>© <span id="year">2026</span> Robo Kids Tozeur. Tous droits réservés.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <a class="to-top" href="#top" id="to-top" hidden aria-label="Retour en haut de la page">
-    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 13V3M3.5 7.5L8 3l4.5 4.5"/></svg>
-  </a>
+    <a
+      class="to-top"
+      href="#top"
+      id="to-top"
+      hidden
+      aria-label="Retour en haut de la page"
+    >
+      <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+        <path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" />
+      </svg>
+    </a>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
