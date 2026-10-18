@@ -12,7 +12,7 @@
    - facebook / instagram : adresse complète de la page, commençant par https://
 */
 const CONFIG = {
-  email: "anissafia90@gmail.com",
+  email: "safiaibtihel86@gmail.com",
   whatsapp: "",
   facebook: "",
   instagram: "",
